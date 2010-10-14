@@ -34,7 +34,7 @@ module TabsHelper
     def render_tabs
       content_tag :ul do
         @tabs.collect do |tab|
-          content_tag( :li, link_to( content_tag( :span, tab[1] ), "##{tab[0]}" ) )
+          content_tag( :li, link_to( content_tag( :span, tab[1] ), "##{tab[0]}", :class => "#{tab[0]}-selector" ) )
         end.join
       end
     end
